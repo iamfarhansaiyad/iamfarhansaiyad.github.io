@@ -94,5 +94,3 @@ Passionate mobile developer with **5+ years of experience** building scalable na
 - Email: fazusai@ymail.com
 ---
 ⭐ Thanks for visiting my profile!
-
-Replace YOUR_GITHUB_USERNAME with your actual GitHub username.
