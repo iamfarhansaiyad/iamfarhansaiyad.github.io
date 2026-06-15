@@ -27,17 +27,19 @@ function Nav() {
     <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-background/70 border-b border-border/40">
       <div className="mx-auto max-w-7xl px-6 md:px-10 h-16 flex items-center justify-between">
         <a href="#top" className="text-foreground text-lg font-semibold tracking-tight">
-          <span className="text-primary">farhan</span>.dev
+          <span className="text-primary">farhan</span>.saiyad
         </a>
         <nav className="hidden md:flex items-center gap-8 font-mono-label text-muted-foreground">
           <a href="#about" className="hover:text-foreground transition-colors">About</a>
           <a href="#experience" className="hover:text-foreground transition-colors">Experience</a>
           <a href="#work" className="hover:text-foreground transition-colors">Projects</a>
           <a href="#contact" className="hover:text-foreground transition-colors">Contact</a>
+          <a href="https://drive.google.com/file/d/1R268HCsXUeW1PSlvWbBXSEsoHdn126xD/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-mono-label text-foreground border border-border rounded-full px-4 py-2 hover:border-primary hover:text-primary transition-colors">Resume ↗</a>
         </nav>
-        <a href="mailto:fazusai@ymail.com" className="font-mono-label text-foreground border border-border rounded-full px-4 py-2 hover:border-primary hover:text-primary transition-colors">
-          Resume ↗
-        </a>
+
       </div>
     </header>
   );
@@ -55,9 +57,9 @@ function Hero() {
   return (
     <section id="top" className="relative pt-32 pb-20 md:pt-40 md:pb-28 px-6 md:px-10 overflow-hidden">
       <div aria-hidden className="pointer-events-none absolute -top-40 -right-40 w-[600px] h-[600px] rounded-full blur-3xl opacity-40"
-           style={{ background: "radial-gradient(circle, oklch(0.74 0.19 50 / 0.55), transparent 60%)" }} />
+        style={{ background: "radial-gradient(circle, oklch(0.74 0.19 50 / 0.55), transparent 60%)" }} />
       <div aria-hidden className="pointer-events-none absolute top-1/3 -left-40 w-[500px] h-[500px] rounded-full blur-3xl opacity-30"
-           style={{ background: "radial-gradient(circle, oklch(0.82 0.16 75 / 0.5), transparent 60%)" }} />
+        style={{ background: "radial-gradient(circle, oklch(0.82 0.16 75 / 0.5), transparent 60%)" }} />
 
       <div className="mx-auto max-w-7xl relative grid lg:grid-cols-12 gap-12 lg:gap-10 items-center">
         <div className="lg:col-span-7">
@@ -100,9 +102,7 @@ function Hero() {
             transition={{ duration: 0.6, delay: 0.8 }}
             className="mt-10 max-w-xl text-base md:text-lg text-muted-foreground leading-relaxed"
           >
-            iOS &amp; Flutter developer with 5 years of expertise in Swift, SwiftUI &amp; Dart —
-            specializing in high-performance mobile applications, Clean Architecture, real-time
-            WebRTC features, and enterprise SaaS rollouts.
+            I'm the engineer you call when the mobile problem is hard. Swift, SwiftUI, Flutter — I've shipped enterprise SaaS, AI-powered consumer apps, and everything in between.
           </motion.p>
 
           <motion.div
@@ -152,7 +152,7 @@ function Hero() {
         >
           <div className="relative rounded-3xl border border-primary/30 p-2 bg-card/40 backdrop-blur glow-mint">
             <div aria-hidden className="absolute inset-0 rounded-3xl pointer-events-none"
-                 style={{ background: "radial-gradient(circle at 50% 60%, oklch(0.85 0.18 165 / 0.15), transparent 70%)" }} />
+              style={{ background: "radial-gradient(circle at 50% 60%, oklch(0.85 0.18 165 / 0.15), transparent 70%)" }} />
             <img
               src={farhanPhoto}
               alt="Farhan Saiyad"
@@ -182,7 +182,7 @@ function Hero() {
       <div className="mx-auto max-w-7xl mt-20 grid grid-cols-3 gap-6 border-t border-border pt-10">
         <Stat k="5+" l="Years shipping" />
         <Stat k="50K+" l="Downloads driven" />
-        <Stat k="12+" l="Apps in production" />
+        <Stat k="20+" l="Apps in production" />
       </div>
     </section>
   );
@@ -332,14 +332,14 @@ function Projects() {
       <div className="mx-auto max-w-7xl">
         <div className="grid md:grid-cols-12 gap-10 mb-16 md:mb-20">
           <div className="md:col-span-4">
-            <div className="font-mono-label text-primary">03 / Selected Work</div>
+            <div className="font-mono-label text-primary">03 / Projects</div>
           </div>
           <h2 className="md:col-span-8 font-display text-4xl md:text-6xl">
             Apps that earned <span className="text-gradient">their install</span>.
           </h2>
         </div>
 
-        <div className="grid sm:grid-cols-2 gap-6 md:gap-8">
+        <div className="grid sm:grid-cols-3 gap-6 md:gap-8">
           {projectList.map((p, i) => (
             <ProjectCard key={p.name} p={p} index={i} />
           ))}
@@ -357,74 +357,133 @@ function ProjectCard({ p, index }: { p: Project; index: number }) {
       viewport={{ once: true, margin: "-60px" }}
       transition={{ duration: 0.6, delay: (index % 2) * 0.08, ease: [0.22, 1, 0.36, 1] }}
       whileHover={{ y: -6 }}
-      className="group block rounded-3xl border border-border bg-card/60 backdrop-blur overflow-hidden transition-colors hover:border-primary/30"
+      className="group flex flex-col rounded-2xl border border-border bg-card/60 backdrop-blur overflow-hidden transition-colors hover:border-primary/30"
     >
-      <div className={`relative aspect-[16/10] overflow-hidden bg-gradient-to-br ${p.gradient}`}>
-        <div aria-hidden className="absolute inset-0 opacity-30"
-             style={{ backgroundImage: "radial-gradient(circle at 20% 30%, white 1px, transparent 1px), radial-gradient(circle at 70% 60%, white 1px, transparent 1px)", backgroundSize: "32px 32px, 48px 48px" }} />
-        <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+      {/* Top image area */}
+      <div className={`relative aspect-[16/9] overflow-hidden bg-gradient-to-br ${p.gradient}`}>
+        <div aria-hidden className="absolute inset-0 opacity-20"
+          style={{ backgroundImage: "radial-gradient(circle at 20% 30%, white 1px, transparent 1px), radial-gradient(circle at 70% 60%, white 1px, transparent 1px)", backgroundSize: "32px 32px, 48px 48px" }} />
+        <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
         <motion.div
           className="absolute inset-0 grid place-items-center"
-          whileHover={{ scale: 1.08 }}
+          whileHover={{ scale: 1.06 }}
           transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
         >
-          <div className="font-display text-7xl md:text-8xl text-white drop-shadow-2xl select-none">
+          <div className="font-display text-8xl md:text-9xl text-white/90 drop-shadow-2xl select-none">
             {p.glyph}
           </div>
         </motion.div>
+        {/* Shimmer on hover */}
         <div aria-hidden className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out"
-             style={{ background: "linear-gradient(110deg, transparent 30%, oklch(1 0 0 / 0.15) 50%, transparent 70%)" }} />
+          style={{ background: "linear-gradient(110deg, transparent 30%, oklch(1 0 0 / 0.12) 50%, transparent 70%)" }} />
       </div>
 
-      <div className="p-6 md:p-7 flex flex-col justify-between min-h-[260px]">
-        <div>
-          <div className="flex flex-wrap gap-2 mb-5">
-            {p.tags.map((t) => (
-              <span key={t} className="text-[10px] font-mono uppercase tracking-widest text-primary border border-primary/40 rounded-full px-2.5 py-1">
-                {t}
-              </span>
-            ))}
-          </div>
-          <h3 className="font-display text-2xl md:text-3xl text-foreground">{p.name}</h3>
-          <p className="mt-3 text-muted-foreground leading-relaxed text-sm md:text-base">{p.desc}</p>
+      {/* Bottom content area */}
+      <div className="flex flex-col flex-1 p-6 md:p-7">
+        <h3 className="font-display text-xl md:text-2xl font-semibold text-foreground mb-3">
+          {p.name}
+        </h3>
+        <p className="text-muted-foreground text-sm md:text-base leading-relaxed mb-5">
+          {p.desc}
+        </p>
+
+        {/* Tags */}
+        <div className="flex flex-wrap gap-2 mb-6">
+          {p.tags.map((t) => (
+            <span key={t} className="text-[10px] font-mono uppercase tracking-widest text-primary border border-primary/30 rounded-full px-2.5 py-1">
+              {t}
+            </span>
+          ))}
         </div>
 
-        <div className="mt-6 pt-4 border-t border-border/30 flex flex-wrap gap-3 items-center">
+        {/* Store links */}
+        <div className="mt-auto flex flex-wrap gap-3">
           {p.appStoreUrl && p.appStoreUrl !== "#" && (
-            <a href={p.appStoreUrl} target="_blank" rel="noopener noreferrer"
-               className="inline-flex items-center gap-1.5 rounded-full bg-foreground/5 hover:bg-primary/10 hover:text-primary border border-border px-4 py-2 font-mono text-xs text-foreground transition-all duration-300">
-              <span></span> App Store <span className="text-muted-foreground">↗</span>
+
+            <a href={p.appStoreUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-full bg-foreground/8 border border-border hover:border-primary/50 hover:bg-primary/10 px-4 py-2 font-mono text-xs text-foreground hover:text-primary transition-all duration-300"
+            >
+              <span className="text-sm"></span> App Store
             </a>
           )}
           {p.playStoreUrl && p.playStoreUrl !== "#" && (
-            <a href={p.playStoreUrl} target="_blank" rel="noopener noreferrer"
-               className="inline-flex items-center gap-1.5 rounded-full bg-foreground/5 hover:bg-primary/10 hover:text-primary border border-border px-4 py-2 font-mono text-xs text-foreground transition-all duration-300">
-              <span>🤖</span> Play Store <span className="text-muted-foreground">↗</span>
+
+            <a href={p.playStoreUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-full bg-foreground/8 border border-border hover:border-primary/50 hover:bg-primary/10 px-4 py-2 font-mono text-xs text-foreground hover:text-primary transition-all duration-300"
+            >
+              <span className="text-sm">▶</span> Google Play
             </a>
           )}
-          {p.href && p.href !== "#" && !p.appStoreUrl && !p.playStoreUrl && (
-            <a href={p.href} target="_blank" rel="noopener noreferrer"
-               className="inline-flex items-center gap-2 rounded-full bg-primary/10 hover:bg-primary hover:text-primary-foreground border border-primary/20 px-5 py-2 font-mono text-xs text-primary transition-all duration-300">
-              Visit Project <span>↗</span>
-            </a>
-          )}
-          {(!p.appStoreUrl || p.appStoreUrl === "#") && (!p.playStoreUrl || p.playStoreUrl === "#") && (!p.href || p.href === "#") && (
-            <span className="text-xs font-mono text-muted-foreground italic">▸ {p.store}</span>
-          )}
+
         </div>
       </div>
     </motion.div>
   );
 }
 
+// function Contact() {
+//   const iconMap: Record<string, LucideIcon> = {
+//     Github, Linkedin, Twitter, Mail, Globe, Instagram, Facebook, AtSign,
+//   };
+
+//   return (
+//     <section id="contact" className="px-6 md:px-10 py-32 md:py-48 border-t border-border relative overflow-hidden">
+//       <div aria-hidden className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] rounded-full blur-3xl opacity-20"
+//            style={{ background: "radial-gradient(circle, oklch(0.85 0.18 165 / 0.6), transparent 60%)" }} />
+//       <div className="mx-auto max-w-7xl relative text-center">
+//         <div className="font-mono-label text-primary mb-6">04 / Contact</div>
+//         <h2 className="font-display text-5xl md:text-7xl font-bold mb-6">
+//           Have a hard<br />mobile problem?<br />
+//           <span className="text-gradient">Let's talk.</span>
+//         </h2>
+//         <p className="text-muted-foreground text-base md:text-lg max-w-lg mx-auto leading-relaxed mb-10">
+//           Open to new roles, freelance projects, and interesting collabs —
+//           find me on any platform below, or drop me a direct email.
+//         </p>
+
+//       <a  
+//           href="mailto:fazusai@ymail.com"
+//           className="font-mono text-primary text-lg md:text-2xl border-b border-dashed border-primary/50 hover:border-primary transition-colors pb-0.5"
+//         >
+//           fazusai@ymail.com
+//         </a>
+
+//         <div className="mt-12 flex items-center justify-center gap-4 flex-wrap">
+//           {socialList.map((s) => {
+//             const IconComponent = iconMap[s.iconName];
+//             return (
+
+//              <a   key={s.platform}
+//                 href={s.href}
+//                 target="_blank"
+//                 rel="noopener noreferrer"
+//                 aria-label={s.platform}
+//                 className="w-12 h-12 rounded-full border border-border grid place-items-center text-muted-foreground hover:text-primary hover:border-primary/50 hover:bg-primary/5 transition-all duration-300"
+//               >
+//                 {IconComponent ? <IconComponent size={18} strokeWidth={1.75} /> : <span className="font-mono text-xs">{s.platform.slice(0, 2).toLowerCase()}</span>}
+//               </a>
+//             );
+//           })}
+//         </div>
+//       </div>
+//     </section>
+//   );
+// }
+
+
 function Contact() {
   return (
     <section id="contact" className="px-6 md:px-10 py-32 md:py-48 border-t border-border relative overflow-hidden">
       <div aria-hidden className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] rounded-full blur-3xl opacity-20"
-           style={{ background: "radial-gradient(circle, oklch(0.85 0.18 165 / 0.6), transparent 60%)" }} />
+        style={{ background: "radial-gradient(circle, oklch(0.85 0.18 165 / 0.6), transparent 60%)" }} />
       <div className="mx-auto max-w-7xl relative">
         <div className="font-mono-label text-primary mb-10">04 / Contact</div>
-        <h2 className="font-display text-[12vw] md:text-[8vw] leading-[0.95]">
+        {/* <h2 className="font-display text-[12vw] md:text-[8vw] leading-[0.95]"> */}
+        <h2 className="font-display text-[12vw] md:text-[7vw] lg:text-[5.5rem] leading-[0.95]">
           Have a hard<br />mobile problem?<br />
           <span className="text-gradient">Let's talk.</span>
         </h2>

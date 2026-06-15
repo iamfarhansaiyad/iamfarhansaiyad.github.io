@@ -21,27 +21,27 @@ export const socials: SocialLink[] = [
   },
   {
     platform: "GitHub",
-    href: "https://github.com/yourusername", // Replace with your GitHub link
+    href: "https://github.com/iamfarhansaiyad", // Replace with your GitHub link
     iconName: "Github",
   },
   {
     platform: "Twitter / X",
-    href: "https://x.com/yourusername", // Replace with your Twitter / X link
+    href: "https://x.com/iamfarhansaiyad", // Replace with your Twitter / X link
     iconName: "Twitter",
   },
   {
     platform: "Instagram",
-    href: "https://instagram.com/yourusername", // Replace with your Instagram link
+    href: "https://instagram.com/iamfarhansaiyad", // Replace with your Instagram link
     iconName: "Instagram",
   },
   {
     platform: "Threads",
-    href: "https://threads.net/@yourusername", // Replace with your Threads link
+    href: "https://threads.net/@iamfarhansaiyad", // Replace with your Threads link
     iconName: "AtSign",
   },
   {
     platform: "Facebook",
-    href: "https://facebook.com/yourusername", // Replace with your Facebook link
+    href: "https://facebook.com/iamfarhansaiyad", // Replace with your Facebook link
     iconName: "Facebook",
   },
   {
