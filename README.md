@@ -1,37 +1,98 @@
-# Farhan Saiyad — Portfolio (Pure React SPA + Vite, for GitHub Pages)
+# Hi there 👋, I'm Farhan Saiyad
+### Senior Mobile Application Engineer | iOS & Flutter Developer
+Passionate mobile developer with **5+ years of experience** building scalable native and cross-platform applications using **Swift, SwiftUI, UIKit, Flutter, and Dart**. Experienced in delivering enterprise SaaS platforms, AI-powered applications, GPS tracking systems, and subscription-based products.
+---
+## 🚀 About Me
+- 📱 Senior iOS & Flutter Developer
+- 💼 5+ Years of Professional Experience
+- 📍 Ahmedabad, Gujarat, India
+- 🔥 Passionate about clean architecture and scalable apps
+- 🤝 Open to exciting opportunities and collaborations
+---
+## 🛠 Tech Stack
+### Mobile Development
+- Swift
+- SwiftUI
+- UIKit
+- Objective-C
+- Flutter
+- Dart
+### Architecture
+- MVVM
+- MVC
+- Clean Architecture
+### Backend & APIs
+- REST APIs
+- JSON Parsing
+- WebSockets
+- Firebase
+### Databases
+- Core Data
+- SQLite
+- Firebase Firestore
+- Realtime Database
+### Integrations
+- Firebase Auth
+- Push Notifications
+- Google Maps
+- OneSignal
+- Face ID / Touch ID
+- Social Login
+- In-App Purchases
+- Beacon (BLE)
+- GPS Tracking
+### Tools
+- Xcode
+- Android Studio
+- Git
+- TestFlight
+- App Store Connect
+---
+## 📌 Featured Projects
+### 📖 EasySpeak – AI-Powered Teleprompter
+- 50K+ Downloads on Google Play
+- AI script generation
+- Subscription-based monetization
+**Tech:** Flutter, Firebase, AI APIs
+---
+### 🏥 vDoctor – Telemedicine Platform
+- Video consultations
+- Appointment scheduling
+- Digital prescriptions
+**Tech:** Flutter, Firebase, WebRTC, Jitsi Meet
+---
+### 📊 Divya Bhaskar Sales App
+- Business dashboards
+- DCR management
+- Incentive modules
+**Tech:** Swift, UIKit, MVVM
+---
+### 📰 Divya Bhaskar Matrix
+- News upload platform for reporters
+- Multilingual support
+- Real-time newsroom communication
+**Tech:** Swift, UIKit, REST APIs
+---
+### 📍 Poros HR – Attendance Platform
+- GPS + Beacon tracking
+- Background location services
+- Real-time reporting
+**Tech:** Swift, Firebase, CoreLocation
+---
+### 💆 Wellnessta
+- Salon & Spa booking platform
+- Memberships and coupons
+- Payment integrations
+**Tech:** Swift, UIKit, Firebase
+<!-- ---
+## 📈 GitHub Stats
+![Farhan's GitHub Stats](https://github-readme-stats.vercel.app/api?username=iamfarhansaiyad&show_icons=true)
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=iamfarhansaiyad&layout=compact) -->
+---
+## 🌐 Connect With Me
+- LinkedIn: https://linkedin.com/in/iamfarhansaiyad
+- Email: fazusai@ymail.com
+---
+⭐ Thanks for visiting my profile!
 
-This folder is a **standalone**, ready-to-deploy version of the portfolio with **no TanStack Start, no SSR, no server functions** — just Vite + React + Tailwind v4 + framer-motion.
-
-## 🚀 Deploy in 5 steps
-
-1. **Copy this folder** into a fresh GitHub repo (or push the contents as the repo root).
-2. Open `vite.config.ts` and set `REPO_NAME`:
-   - Project site (`github.com/<you>/portfolio` → `<you>.github.io/portfolio/`): keep `"portfolio"` (use your repo name).
-   - User/org site (`<you>.github.io`): set `REPO_NAME = ""`.
-3. In your GitHub repo: **Settings → Pages → Build and deployment → Source: GitHub Actions**.
-4. Push to `main`. The workflow in `.github/workflows/deploy.yml` builds and deploys automatically.
-5. Done — visit `https://<you>.github.io/<repo>/`.
-
-## 🛠 Local development
-
-```bash
-npm install
-npm run dev      # http://localhost:5173
-npm run build    # production build → ./dist
-npm run preview  # preview the build
-```
-
-## ✏️ Edit content
-
-- **Projects/apps** — `src/data/projects.ts` (add/remove/edit cards, App Store / Play Store links).
-- **Social links** — `src/data/socials.ts`.
-- **Hero/About/Experience/Contact copy** — `src/App.tsx`.
-- **Photo** — replace `src/assets/farhan.png`.
-- **Colors/fonts** — `src/styles.css`.
-- **SEO title/description/OG tags** — `index.html`.
-
-## Notes
-
-- `public/.nojekyll` is required so GitHub Pages serves files starting with `_`.
-- Site is a single scrolling page (anchor links `#about`, `#work`, etc.) — no router needed.
-- No backend. Anything that needs a server (auth, DB, contact form processing) is out of scope for GitHub Pages.
+Replace YOUR_GITHUB_USERNAME with your actual GitHub username.
