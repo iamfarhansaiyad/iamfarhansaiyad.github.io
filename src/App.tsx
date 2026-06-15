@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import farhanPhoto from "@/assets/farhan.png";
+import farhanPhoto from "@/assets/farhan.webp";
 import { projects as projectList, type Project } from "@/data/projects";
 import { socials as socialList } from "@/data/socials";
 import {
