@@ -1,9 +1,11 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import farhanPhoto from "@/assets/farhan.webp";
 import { projects as projectList, type Project } from "@/data/projects";
 import { socials as socialList } from "@/data/socials";
 import {
   Github, Linkedin, Twitter, Mail, Globe, Instagram, Facebook, AtSign,
+  Menu, X,
   type LucideIcon,
 } from "lucide-react";
 
@@ -23,12 +25,25 @@ export default function App() {
 }
 
 function Nav() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-background/70 border-b border-border/40">
       <div className="mx-auto max-w-7xl px-6 md:px-10 h-16 flex items-center justify-between">
         <a href="#top" className="text-foreground text-lg font-semibold tracking-tight">
           <span className="text-primary">farhan</span>.saiyad
         </a>
+
+        <button
+          type="button"
+          onClick={() => setIsOpen((value) => !value)}
+          className="inline-flex items-center justify-center rounded-full border border-border p-2 text-muted-foreground hover:border-primary hover:text-primary transition-colors md:hidden"
+          aria-label={isOpen ? "Close menu" : "Open menu"}
+          aria-expanded={isOpen}
+        >
+          {isOpen ? <X size={20} /> : <Menu size={20} />}
+        </button>
+
         <nav className="hidden md:flex items-center gap-8 font-mono-label text-muted-foreground">
           <a href="#about" className="hover:text-foreground transition-colors">About</a>
           <a href="#experience" className="hover:text-foreground transition-colors">Experience</a>
@@ -39,8 +54,34 @@ function Nav() {
             rel="noopener noreferrer"
             className="font-mono-label text-foreground border border-border rounded-full px-4 py-2 hover:border-primary hover:text-primary transition-colors">Resume ↗</a>
         </nav>
-
       </div>
+
+      {isOpen && (
+        <div className="md:hidden border-t border-border bg-background/95 backdrop-blur-lg">
+          <div className="mx-auto max-w-7xl px-6 pb-6 pt-4 space-y-4 font-mono-label text-muted-foreground">
+            <a href="#about" onClick={() => setIsOpen(false)} className="block rounded-xl px-4 py-3 hover:bg-primary/5 hover:text-primary transition-colors">
+              About
+            </a>
+            <a href="#experience" onClick={() => setIsOpen(false)} className="block rounded-xl px-4 py-3 hover:bg-primary/5 hover:text-primary transition-colors">
+              Experience
+            </a>
+            <a href="#work" onClick={() => setIsOpen(false)} className="block rounded-xl px-4 py-3 hover:bg-primary/5 hover:text-primary transition-colors">
+              Projects
+            </a>
+            <a href="#contact" onClick={() => setIsOpen(false)} className="block rounded-xl px-4 py-3 hover:bg-primary/5 hover:text-primary transition-colors">
+              Contact
+            </a>
+            <a
+              href="https://drive.google.com/file/d/1R268HCsXUeW1PSlvWbBXSEsoHdn126xD/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block rounded-xl border border-border px-4 py-3 text-foreground hover:border-primary hover:text-primary transition-colors"
+            >
+              Resume ↗
+            </a>
+          </div>
+        </div>
+      )}
     </header>
   );
 }
